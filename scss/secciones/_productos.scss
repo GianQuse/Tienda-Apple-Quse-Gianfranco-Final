@@ -1,0 +1,24 @@
+.main {
+    .container {
+        max-width: 100%;
+
+        .row {
+            align-items: center;
+            justify-content: center;
+
+            .tamaño-foto {
+                max-width: 85%;
+            }
+
+        }
+
+        h5 {
+            @include font-style(900)
+        }
+
+        p {
+            @include font-style(400)
+        }
+
+    }
+}

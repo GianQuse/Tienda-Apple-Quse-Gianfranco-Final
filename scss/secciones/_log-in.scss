@@ -1,0 +1,43 @@
+.mainLog {
+    margin-bottom: 15px;
+    text-align: center;
+
+    h1 {
+        @include font-style (900);
+        font-size: 9vw;
+    }
+
+    h2 {
+        @include font-style (400);
+        font-size: 5.5vw;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .inputBottom {
+            border-bottom: 1px solid rgb(124, 124, 124);
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            padding-left: 2px;
+        }
+
+        .botonesLogin {
+            input {
+                font-size: 3.6vw;
+                width: 26vw;
+            }
+        }
+
+        .marginR{
+            margin-right: 10px;
+        }
+    }
+
+    .marginForm {
+        margin-bottom: 10px;
+    }
+}

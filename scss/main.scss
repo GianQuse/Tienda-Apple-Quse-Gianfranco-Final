@@ -1,0 +1,19 @@
+@import'./secciones/general';
+
+@import './variables/variables';
+@import './variables/extend';
+@import './variables/mixin';
+
+@import './secciones/header';
+@import './secciones/banner';
+@import './secciones/section1';
+@import './secciones/carousel';
+@import './secciones/section2';
+@import './secciones/footer';
+
+@import './secciones/productos';
+@import './secciones/log-in';
+
+@import'./secciones/keyframes';
+
+@import './media-querys/mobile-first';
