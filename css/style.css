@@ -122,60 +122,69 @@ header .navbar-nav {
 
 .footer {
   background-color: #9C9C9C;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "socialTelefono" "email" "contenedorMapa";
   /*INICIO REDES SOCIALES Y TELEFONO*/
   /*FIN REDES SOCIALES Y TELEFONO*/
   /*INICIO EMAIL*/
   /*FIN EMAIL*/
   /*INICIO MAPA*/
   /*FIN MAPA*/ }
-  .footer .socialTelefono .tituloRedes {
-    font-family: 'Alegreya', serif;
-    font-size: 6vw;
-    font-weight: 700;
-    line-height: 1.2;
-    padding: 5px;
-    text-align: center; }
-  .footer .socialTelefono .iconSocial {
-    display: flex;
-    justify-content: space-evenly;
-    width: 65vw;
-    margin: 3px 0px; }
-    .footer .socialTelefono .iconSocial a img {
-      height: 10vw; }
-  .footer .socialTelefono .telefono {
-    text-align: center; }
-    .footer .socialTelefono .telefono h4 {
-      font-family: 'Alegreya', serif;
-      font-weight: 400;
-      font-size: 5.7vw; }
-    .footer .socialTelefono .telefono p {
-      font-size: 4vw; }
-  .footer .email .formulario {
+  .footer .socialTelefono {
+    grid-area: socialTelefono;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .footer .email .formulario input {
-      padding: 0px 5px; }
-      .footer .email .formulario input:focus {
-        background-color: #eaeaea; }
-    .footer .email .formulario textarea {
-      margin: 3px;
-      border-radius: 8px;
-      width: 60vw;
-      height: 15vh;
-      font-size: 3vw;
-      padding: 2px 5px 0px 5px; }
-      .footer .email .formulario textarea:focus {
-        background-color: #eaeaea; }
-    .footer .email .formulario .boton input {
-      width: 23vw;
-      height: auto;
-      font-size: 3vw;
-      border-radius: 8px; }
+    .footer .socialTelefono .tituloRedes {
+      font-family: 'Alegreya', serif;
+      font-size: 6vw;
+      font-weight: 700;
+      line-height: 1.2;
+      padding: 5px;
+      text-align: center; }
+    .footer .socialTelefono .iconSocial {
+      display: flex;
+      justify-content: space-evenly;
+      width: 65vw;
+      margin-bottom: 8px; }
+      .footer .socialTelefono .iconSocial a img {
+        height: 10vw; }
+    .footer .socialTelefono .telefono {
+      text-align: center; }
+      .footer .socialTelefono .telefono h4 {
+        font-family: 'Alegreya', serif;
+        font-weight: 400;
+        font-size: 5.7vw; }
+      .footer .socialTelefono .telefono p {
+        font-size: 4vw; }
+  .footer .email {
+    grid-area: email; }
+    .footer .email .formulario {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .footer .email .formulario input {
+        padding: 0px 5px; }
+        .footer .email .formulario input:focus {
+          background-color: #eaeaea; }
+      .footer .email .formulario textarea {
+        margin: 3px;
+        border-radius: 8px;
+        width: 60vw;
+        height: 15vh;
+        font-size: 3vw;
+        padding: 2px 5px 0px 5px; }
+        .footer .email .formulario textarea:focus {
+          background-color: #eaeaea; }
+      .footer .email .formulario .boton input {
+        width: 23vw;
+        height: auto;
+        font-size: 3vw;
+        border-radius: 8px; }
   .footer .contenedorMapa {
+    grid-area: contenedorMapa;
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -209,6 +218,9 @@ header .navbar-nav {
 
 .mainLog {
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center; }
   .mainLog h1 {
     font-family: 'Alegreya', serif;
@@ -235,6 +247,13 @@ header .navbar-nav {
       margin-right: 10px; }
   .mainLog .marginForm {
     margin-bottom: 10px; }
+
+.bannerLogin {
+  width: 100%;
+  border-top: 5px white solid;
+  border-bottom: 5px white solid; }
+  .bannerLogin img {
+    width: 100%; }
 
 @keyframes zoom {
   0% {
@@ -302,9 +321,10 @@ header .navbar-nav {
       margin-bottom: 0px; }
   .footer {
     border-top: 8px white solid;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 6px 0px; }
+    padding: 6px 0px;
+    align-items: center;
+    grid-template-columns: auto;
+    grid-template-areas: "socialTelefono email contenedorMapa"; }
     .footer .socialTelefono {
       display: flex;
       flex-direction: column; }
@@ -338,13 +358,15 @@ header .navbar-nav {
     .footer .contenedorMapa .mapa {
       width: 28vw; }
   /*INICIO LOG-IN*/
-  .mainLog {
-    /*FIN LOG-IN*/ }
-    .mainLog h1 {
-      font-size: 6vw; }
-    .mainLog h2 {
-      font-size: 3.5vw;
-      margin-bottom: 15px; }
-    .mainLog .form .botonesLogin input {
-      font-size: 1vw;
-      width: 7vw; } }
+  .mainLog h1 {
+    font-size: 6vw; }
+  .mainLog h2 {
+    font-size: 3.5vw;
+    margin-bottom: 15px; }
+  .mainLog .form .botonesLogin input {
+    font-size: 1vw;
+    width: 7vw; }
+  .bannerLogin {
+    border-top: 8px white solid;
+    border-bottom: none; }
+  /*FIN LOG-IN*/ }

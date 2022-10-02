@@ -68,9 +68,11 @@
 
     .footer {
         border-top: $borde8;
-        flex-direction: row;
-        justify-content: space-around;
         padding: 6px 0px;
+        align-items: center;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "socialTelefono email contenedorMapa";
 
         .socialTelefono {
             display: flex;
@@ -161,6 +163,13 @@
             }
         }
 
-        /*FIN LOG-IN*/
     }
+
+    .bannerLogin {
+        border-top: 8px white solid;
+        border-bottom: none;
+    }
+
+    /*FIN LOG-IN*/
+
 }

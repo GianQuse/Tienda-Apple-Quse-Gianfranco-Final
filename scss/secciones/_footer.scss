@@ -1,11 +1,20 @@
 .footer {
     background-color: #9C9C9C;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "socialTelefono"
+        "email"
+        "contenedorMapa";
 
     /*INICIO REDES SOCIALES Y TELEFONO*/
     .socialTelefono {
+        grid-area: socialTelefono;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         .tituloRedes {
             font-family: 'Alegreya', serif;
             font-size: 6vw;
@@ -19,7 +28,7 @@
             display: flex;
             justify-content: space-evenly;
             width: 65vw;
-            margin: 3px 0px;
+            margin-bottom: 8px;
 
             a {
                 img {
@@ -46,6 +55,8 @@
     /*FIN REDES SOCIALES Y TELEFONO*/
     /*INICIO EMAIL*/
     .email {
+        grid-area: email;
+
         .subtitulo-email {
             @extend %estilo-subtitulo;
         }
@@ -94,10 +105,11 @@
     /*FIN EMAIL*/
     /*INICIO MAPA*/
     .contenedorMapa {
+        grid-area: contenedorMapa;
         display: flex;
         flex-direction: column;
         align-items: center;
-    
+
         h4 {
             text-align: center;
             font-family: 'Alegreya', serif;
@@ -106,16 +118,17 @@
             margin-bottom: 3px;
             margin-top: 8px;
         }
-    
+
         .mapa {
             width: 80vw;
             height: 30vh;
             margin-bottom: 8px;
         }
-    
+
         iframe {
             border-radius: 8px;
         }
     }
+
     /*FIN MAPA*/
 }
